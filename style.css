@@ -1,0 +1,38 @@
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 32px auto auto auto 24px;
+      grid-template-rows: 32px auto auto auto 24px;
+      grid-template-areas: "header" "nav" "main" "footer";
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: nav;
+}
+
+nav ul {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+}
+
+main {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: main;
+}
+
+footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+/*# sourceMappingURL=style.css.map */

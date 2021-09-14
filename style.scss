@@ -1,0 +1,29 @@
+.wrapper{
+    display: grid;
+    grid-template-rows: 32px auto auto auto 24px;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+}
+
+header{
+    grid-area: header;
+}
+
+nav{
+grid-area: nav;
+    ul{
+        display: grid;
+        text-align: center;
+    }
+}
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+}
