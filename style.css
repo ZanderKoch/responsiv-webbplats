@@ -1,8 +1,8 @@
 .wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 32px auto auto auto 24px;
-      grid-template-rows: 32px auto auto auto 24px;
+  -ms-grid-rows: 48px auto auto auto 24px;
+      grid-template-rows: 48px auto auto auto 24px;
       grid-template-areas: "header" "nav" "main" "footer";
 }
 
@@ -34,5 +34,9 @@ footer {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: footer;
+}
+
+h1 {
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

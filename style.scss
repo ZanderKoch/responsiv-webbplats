@@ -1,6 +1,6 @@
 .wrapper{
     display: grid;
-    grid-template-rows: 32px auto auto auto 24px;
+    grid-template-rows: 48px auto auto auto 24px;
     grid-template-areas: 
         "header"
         "nav"
@@ -26,4 +26,8 @@ main{
 
 footer{
     grid-area: footer;
+}
+
+h1{
+    margin: 0;
 }
