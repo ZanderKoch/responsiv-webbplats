@@ -1,3 +1,7 @@
+body{
+    margin: 0px;
+}
+
 .wrapper{
     display: grid;
     grid-template-rows: 48px auto auto auto 24px;
@@ -6,6 +10,7 @@
         "nav"
         "main"
         "footer";
+    min-height: 100vh;
 }
 
 header{
@@ -21,13 +26,140 @@ grid-area: nav;
 }
 
 main{
+    margin-left: 1em;
+    margin-right: 1em;
     grid-area: main;
+    img{
+        max-width: 100%;
+    }
 }
 
 footer{
     grid-area: footer;
+    p{
+        margin-top: 0px;
+    }
 }
 
 h1{
     margin: 0;
+}
+
+
+@media (min-width: 769px) {
+    .wrapper{
+        display: grid;
+        grid-template-rows: 48px auto auto 24px;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+        min-height: 100vh;
+    }
+
+    nav{
+        grid-area: nav;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    main{
+        display: grid;
+        grid-area: main;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer{
+        grid-area: footer;
+    }
+    
+    h1{
+        margin: 0;
+    }
+}
+
+//////////
+//SIDA 2//
+//////////
+body#sida2{
+    margin: 0px;
+    
+    .wrapper{
+        display: grid;
+        grid-template-rows: 48px auto auto auto 24px;
+        grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "footer";
+        min-height: 100vh;
+    }
+    
+    header{
+        grid-area: header;
+    }
+    
+    nav{
+    grid-area: nav;
+        ul{
+            display: grid;
+            text-align: center;
+        }
+    }
+    
+    main{
+        margin-left: 1em;
+        margin-right: 1em;
+        grid-area: main;
+        
+        img{
+            max-width: 100%;
+        }
+        
+        display: grid;
+        grid-template-columns: auto;
+        article{
+            figure{
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                figcaption{
+                    align-self: center;
+                    margin-left: 1em;
+                }
+            }
+        }
+        
+    }
+    
+    footer{
+        grid-area: footer;
+        p{
+            margin-top: 0px;
+        }
+    }
+    
+    h1{
+        margin: 0;
+    }
+    //desktop only
+    @media (min-width: 769px) {
+        min-height: 100vh;
+        
+        nav{
+            grid-area: nav;
+        }
+
+        main{
+            display: grid;
+            grid-area: main;
+        }
+
+        footer{
+            grid-area: footer;
+        }
+        
+        h1{
+            margin: 0;
+        }
+    }
 }
