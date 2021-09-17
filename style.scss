@@ -5,7 +5,7 @@ body{
 .wrapper{
     display: grid;
     grid-template-rows: 48px auto auto auto 24px;
-    grid-template-areas: 
+    grid-template-areas:
         "header"
         "nav"
         "main"
@@ -50,7 +50,7 @@ h1{
     .wrapper{
         display: grid;
         grid-template-rows: 48px auto auto 24px;
-        grid-template-areas: 
+        grid-template-areas:
         "header"
         "nav"
         "main"
@@ -87,30 +87,43 @@ body#sida2{
     .wrapper{
         display: grid;
         grid-template-rows: 48px auto auto auto 24px;
-        grid-template-areas: 
+        grid-template-areas:
             "header"
             "nav"
             "main"
             "footer";
         min-height: 100vh;
+        border-style: solid;
+        border-width: 0.25px;
     }
     
     header{
         grid-area: header;
+        border-style: solid;
+        border-width: 0.25px;
     }
     
     nav{
     grid-area: nav;
+    margin: 0;
         ul{
+            margin: 0;
+            padding: 0;
             display: grid;
             text-align: center;
+            list-style-type: none;
+            li{
+                border-style: solid;
+                border-width: 0.125px 0px
+            }
         }
     }
     
     main{
-        margin-left: 1em;
-        margin-right: 1em;
+        margin: 0;
         grid-area: main;
+        border-style: solid;
+        border-width: 0.25px;
         
         img{
             max-width: 100%;
@@ -119,6 +132,7 @@ body#sida2{
         display: grid;
         grid-template-columns: auto;
         article{
+            margin: 0;
             figure{
                 display:grid;
                 grid-template-columns: 1fr 1fr;
@@ -127,6 +141,8 @@ body#sida2{
                     margin-left: 1em;
                 }
             }
+            border-style: solid;
+            border-width: 0.125px 0px
         }
         
     }
@@ -145,13 +161,49 @@ body#sida2{
     @media (min-width: 769px) {
         min-height: 100vh;
         
+        .wrapper{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 48px auto 24px;
+            grid-template-areas: 
+            "header header"
+            "nav main"
+            "footer footer";
+        }
+        
+        header{
+            grid-area: header;
+        }
+        
         nav{
             grid-area: nav;
-        }
 
+            ul{
+                height: 100%;
+            }
+        }
         main{
-            display: grid;
             grid-area: main;
+            
+            article{
+                margin: 0.5em 0;
+                
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-template-areas:
+                "figure text";
+                
+                figure{
+                    align-self: center;
+                    margin: 1em;
+                    grid-area: figure;
+                    display: block;
+                }
+                p{
+                    grid-area: text;
+                    align-self: center;
+                }
+            }
         }
 
         footer{
