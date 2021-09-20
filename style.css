@@ -42,7 +42,7 @@ main img {
 }
 
 footer {
-  -ms-grid-row: 4;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: footer;
 }
@@ -79,7 +79,7 @@ h1 {
         grid-template-columns: 1fr 1fr;
   }
   footer {
-    -ms-grid-row: 4;
+    -ms-grid-row: 5;
     -ms-grid-column: 1;
     grid-area: footer;
   }
@@ -95,8 +95,8 @@ body#sida2 {
 body#sida2 .wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 48px auto auto auto 24px;
-      grid-template-rows: 48px auto auto auto 24px;
+  -ms-grid-rows: 48px auto auto 24px;
+      grid-template-rows: 48px auto auto 24px;
       grid-template-areas: "header" "nav" "main" "footer";
   min-height: 100vh;
   border-style: solid;
@@ -141,7 +141,6 @@ body#sida2 main {
   border-width: 0.25px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto;
       grid-template-columns: auto;
 }
 
@@ -170,7 +169,7 @@ body#sida2 main article figure figcaption {
 }
 
 body#sida2 footer {
-  -ms-grid-row: 4;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: footer;
 }
@@ -199,7 +198,6 @@ body#sida2 h1 {
   body#sida2 header {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
     grid-area: header;
   }
   body#sida2 nav {
@@ -211,8 +209,8 @@ body#sida2 h1 {
     height: 100%;
   }
   body#sida2 main {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
     grid-area: main;
   }
   body#sida2 main article {
@@ -242,12 +240,157 @@ body#sida2 h1 {
         align-self: center;
   }
   body#sida2 footer {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: footer;
+  }
+  body#sida2 h1 {
+    margin: 0;
+  }
+}
+
+body#sida3 {
+  margin: 0px;
+}
+
+body#sida3 .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 48px auto auto auto 24px;
+      grid-template-rows: 48px auto auto auto 24px;
+      grid-template-areas: "header" "nav" "main" "aside" "footer";
+  min-height: 100vh;
+  border-style: solid;
+  border-width: 0.25px;
+}
+
+body#sida3 header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  border-style: solid;
+  border-width: 0.25px;
+}
+
+body#sida3 nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: nav;
+  margin: 0;
+}
+
+body#sida3 nav ul {
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  list-style-type: none;
+}
+
+body#sida3 nav ul li {
+  border-style: solid;
+  border-width: 0.125px 0px;
+}
+
+body#sida3 main {
+  margin: 0;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: main;
+  border-style: solid;
+  border-width: 0.25px;
+}
+
+body#sida3 aside {
+  margin: 0;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: aside;
+  border-style: solid;
+  border-width: 0.25px;
+}
+
+body#sida3 footer {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+
+body#sida3 footer p {
+  margin-top: 0px;
+}
+
+body#sida3 h1 {
+  margin: 0;
+}
+
+@media (min-width: 769px) {
+  body#sida3 {
+    min-height: 100vh;
+  }
+  body#sida3 .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 3fr;
+        grid-template-columns: 1fr 3fr;
+    -ms-grid-rows: 48px auto 24px;
+        grid-template-rows: 48px auto 24px;
+        grid-template-areas: "header header" "nav main" "footer footer";
+  }
+  body#sida3 header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: header;
+  }
+  body#sida3 nav {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: nav;
+    display: inline-block;
+  }
+  body#sida3 nav ul {
+    height: 100%;
+  }
+  body#sida3 main {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: main;
+  }
+  body#sida3 main article {
+    margin: 0.5em 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: "figure text";
+  }
+  body#sida3 main article figure {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 1em;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: figure;
+    display: block;
+  }
+  body#sida3 main article p {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: text;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  body#sida3 footer {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: footer;
   }
-  body#sida2 h1 {
+  body#sida3 h1 {
     margin: 0;
   }
 }
