@@ -86,7 +86,7 @@ body#sida2{
     
     .wrapper{
         display: grid;
-        grid-template-rows: 48px auto auto 24px;
+        grid-template-rows: 48px min-content auto 24px;
         grid-template-areas:
             "header"
             "nav"
@@ -224,7 +224,7 @@ body#sida3{
     
     .wrapper{
         display: grid;
-        grid-template-rows: 48px auto auto auto 24px;
+        grid-template-rows: 48px min-content auto auto 24px;
         grid-template-areas:
             "header"
             "nav"
@@ -245,6 +245,7 @@ body#sida3{
     nav{
         grid-area: nav;
         margin: 0;
+        
 
         ul{
             margin: 0;
@@ -289,12 +290,12 @@ body#sida3{
         
         .wrapper{
             display: grid;
-            grid-template-columns: 1fr 3fr;
+            grid-template-columns: 1fr 3fr 3fr;
             grid-template-rows: 48px auto 24px;
             grid-template-areas: 
-            "header header"
-            "nav main"
-            "footer footer";
+            "header header header"
+            "nav    main   aside"
+            "footer footer footer";
         }
         
         header{

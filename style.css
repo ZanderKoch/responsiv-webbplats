@@ -95,8 +95,9 @@ body#sida2 {
 body#sida2 .wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 48px auto auto 24px;
-      grid-template-rows: 48px auto auto 24px;
+  -ms-grid-rows: 48px min-content auto 24px;
+      grid-template-rows: 48px -webkit-min-content auto 24px;
+      grid-template-rows: 48px min-content auto 24px;
       grid-template-areas: "header" "nav" "main" "footer";
   min-height: 100vh;
   border-style: solid;
@@ -256,8 +257,9 @@ body#sida3 {
 body#sida3 .wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 48px auto auto auto 24px;
-      grid-template-rows: 48px auto auto auto 24px;
+  -ms-grid-rows: 48px min-content auto auto 24px;
+      grid-template-rows: 48px -webkit-min-content auto auto 24px;
+      grid-template-rows: 48px min-content auto auto 24px;
       grid-template-areas: "header" "nav" "main" "aside" "footer";
   min-height: 100vh;
   border-style: solid;
@@ -332,16 +334,16 @@ body#sida3 h1 {
   body#sida3 .wrapper {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 3fr;
-        grid-template-columns: 1fr 3fr;
+    -ms-grid-columns: 1fr 3fr 3fr;
+        grid-template-columns: 1fr 3fr 3fr;
     -ms-grid-rows: 48px auto 24px;
         grid-template-rows: 48px auto 24px;
-        grid-template-areas: "header header" "nav main" "footer footer";
+        grid-template-areas: "header header header" "nav    main   aside" "footer footer footer";
   }
   body#sida3 header {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
+    -ms-grid-column-span: 3;
     grid-area: header;
   }
   body#sida3 nav {
@@ -387,7 +389,7 @@ body#sida3 h1 {
   body#sida3 footer {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
+    -ms-grid-column-span: 3;
     grid-area: footer;
   }
   body#sida3 h1 {
